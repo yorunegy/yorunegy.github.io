@@ -1,62 +1,110 @@
-body {
-    font-family: Arial, sans-serif;
+:root {
+    --primary-color: #1565c0; /* 科学・技術を象徴する青 */
+    --secondary-color: #4caf50; /* 自然を象徴する緑 */
+    --accent-color: #ff9800; /* アクセントとしてのオレンジ */
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --light-text: #fff;
+    --border-color: #ddd;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* モバイルファーストのレイアウト */
 .container {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto;
 }
 
 header {
-    background-color: #ff6f69;
-    color: white;
-    padding: 20px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-text);
+    padding: 20px 15px;
     text-align: center;
+    box-shadow: var(--box-shadow);
 }
 
 header h1 {
     margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
 }
 
 .header-image {
     width: 100%;
-    max-width: 600px;
+    max-width: 100%;
+    height: auto;
     display: block;
-    margin: 10px auto;
+    margin: 15px auto 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }
 
 main {
-    padding: 20px;
-}
-
-.location-images {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.location-images img {
-    max-width: 150px;
-    height: auto;
-    border: 1px solid #ccc;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+    padding: 15px;
 }
 
 section {
-    margin-bottom: 20px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 20px 15px;
+    margin-bottom: 25px;
+    box-shadow: var(--box-shadow);
 }
 
 h2 {
-    font-size: 1.5em;
-    border-bottom: 2px solid #ff6f69;
-    padding-bottom: 5px;
-    color: #ff6f69;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+h2::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    margin-right: 10px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.location-images, .course-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.location-images img, .course-images img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 1px solid var(--border-color);
+    padding: 3px;
+    border-radius: var(--border-radius);
+    background-color: white;
+    box-shadow: var(--box-shadow);
 }
 
 .course-schedule {
@@ -65,76 +113,198 @@ h2 {
 
 .course-schedule h3 {
     margin: 10px 0;
-    font-size: 1.3em;
-    color: #333;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    background-color: rgba(76, 175, 80, 0.1);
+    padding: 8px;
+    border-radius: var(--border-radius);
 }
 
 .schedule-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
 }
 
 .schedule-table td {
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     padding: 10px;
     text-align: center;
 }
 
 .schedule-day {
     font-weight: bold;
-    background-color: #f9f9f9;
+    background-color: var(--primary-color);
+    color: var(--light-text);
 }
 
 .schedule-time {
-    background-color: #f0f0f0;
+    background-color: rgba(21, 101, 192, 0.1);
 }
 
 .schedule-time div {
-    margin: 0;
-    padding: 0;
+    margin: 2px 0;
 }
 
-.course-images {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.course {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--border-color);
 }
 
-.course-images img {
-    max-width: 150px;
-    height: auto;
-    border: 1px solid #ccc;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
+.course:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-table {
+.course h3 {
+    color: var(--primary-color);
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.course p {
+    margin: 10px 0;
+}
+
+.course a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.course a:hover {
+    text-decoration: underline;
+}
+
+.fees table {
     width: 100%;
-    margin-bottom: 20px;
+    margin: 15px 0;
     border-collapse: collapse;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
 }
 
-td {
-    border: 1px solid #ddd;
-    padding: 8px;
+.fees td {
+    border: 1px solid var(--border-color);
+    padding: 12px 8px;
     text-align: center;
+}
+
+.fees tr:first-child td {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    font-weight: bold;
+}
+
+.fees tr:nth-child(even) {
+    background-color: rgba(21, 101, 192, 0.05);
+}
+
+.faq .question {
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.faq .q {
+    background-color: rgba(21, 101, 192, 0.1);
+    padding: 12px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.faq .q::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+.faq .a {
+    padding: 15px;
+    background-color: white;
+    display: none;
+}
+
+.faq .a.show {
+    display: block;
 }
 
 footer {
-    background-color: #ff6f69;
-    color: white;
-    padding: 10px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-text);
+    padding: 20px 15px;
     text-align: center;
 }
 
+.company-info {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9rem;
+}
+
 footer a {
-    color: white;
+    color: var(--light-text);
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/* タブレット向けスタイル */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .location-images, .course-images {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    
+    .location-images img, .course-images img {
+        max-width: 220px;
+    }
+}
+
+/* デスクトップ向けスタイル */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        padding: 25px;
+    }
+    
+    .location-images img, .course-images img {
+        max-width: 250px;
+    }
 }

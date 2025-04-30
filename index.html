@@ -4,139 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <title>上海プログラミング教室</title>
+    <title>上海プログラミング教室 - STEM教育</title>
 </head>
 
 <body>
-    <header>
-        <h1>上海プログラミング教室</h1>
-        <img src="img/programming.jpg" alt="子供たちの笑顔" class="header-image">
-    </header>
-    <main>
-        <section class="location">
-            <h2>場所</h2>
-            <p>翠玉南路 古羊路を南に少し向かったところにあります</p>
-            <div class="location-images">
-                <img src="img/classroom1.jpg" alt="教室１">
-                <img src="img/classroom2.jpg" alt="教室２">
-                <img src="img/map.jpg" alt="地図">
-            </div>
-        </section>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-atom"></i> 上海プログラミング教室</h1>
+            <p class="tagline">未来を創造する力を育てる STEM教育</p>
+            <img src="img/programming.jpg" alt="子供たちの笑顔" class="header-image">
+        </header>
+        <main>
+            <section class="location">
+                <h2><i class="fas fa-map-marker-alt"></i> 場所</h2>
+                <p>planto study center 虹五路 翠玉南路</p>
+                <p>テコンドー教室の隣です</p>
+                <div class="location-images">
+                    <img src="img/classroom1.jpg" alt="教室１">
+                    <img src="img/classroom2.jpg" alt="教室２">
+                    <img src="img/map.jpg" alt="地図">
+                </div>
+            </section>
 
-        <section class="schedule">
-            <h2>日時</h2>
-            <div class="course-schedule">
-                <h3>プログラミングコース</h3>
-                <table class="schedule-table">
+            <section class="schedule">
+                <h2><i class="fas fa-calendar-alt"></i> 日時</h2>
+                <div class="course-schedule">
+                    <h3><i class="fas fa-laptop-code"></i> プログラミングコース</h3>
+                    <table class="schedule-table">
+                        <tr>
+                            <td class="schedule-day">毎週土曜</td>
+                            <td class="schedule-time">
+                                <div>基本コース</div>
+                                <div>13時～14時</div>
+                            </td>
+                            <td class="schedule-time">
+                                <div>応用コース</div>
+                                <div>14時～15時</div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="course-schedule">
+                    <h3><i class="fas fa-robot"></i> ロボットコース</h3>
+                    <p>現在準備中</p>
+                </div>
+            </section>
+
+            <section class="courses">
+                <h2><i class="fas fa-chalkboard-teacher"></i> コースの説明</h2>
+                <div class="course">
+                    <h3>基本コース</h3>
+                    <div class="course-images">
+                        <img src="img/scratch-sample.jpg" alt="Scratchサンプル1">
+                        <img src="img/scratch-sample2.jfif" alt="Scratchサンプル2">
+                        <img src="img/junior.png" alt="基本コースのサムネイル">
+                    </div>
+                    <p>Scratchを使ってゲームを作りながら楽しくプログラミングの基本を学びます。「<a
+                            href="https://www.sikaku.gr.jp/js/ks/">ジュニアプログラミング検定</a>１級への合格を目指します。</p>
+                    <p>平仮名の文章が読める<strong>小学２年生以上</strong>にオススメです</p>
+                </div>
+                <div class="course">
+                    <h3>応用コース</h3>
+                    <div class="course-images">
+                        <img src="img/python-sample.jfif" alt="Pythonサンプル1">
+                        <img src="img/python-sample2.jfif" alt="Pythonサンプル2">
+                        <img src="img/pgskill.jpg" alt="応用コースのサムネイル">
+                    </div>
+                    <p>Pythonを使ってゲームを作りながら楽しく本格的なプログラミングを学びます。<a
+                            href="https://www.sikaku.gr.jp/js/py/introduction/range/">Python能力認定試験</a>１級（高校の「情報科」レベル）への合格を目指します。</p>
+                    <p><strong>ジュニアプログラミング検定１級</strong>程度のプログラミング能力と、<strong>英検５級</strong>程度の英語力が必要になります。</p>
+                </div>
+            </section>
+
+            <section class="fees">
+                <h2><i class="fas fa-coins"></i> 料金</h2>
+                <table>
                     <tr>
-                        <td class="schedule-day">毎週土曜</td>
-                        <td class="schedule-time">
-                            <div>基本コース</div>
-                            <div>13時～14時</div>
-                        </td>
-                        <td class="schedule-time">
-                            <div>応用コース</div>
-                            <div>14時～15時</div>
-                        </td>
+                        <td>チケット回数</td>
+                        <td>料金</td>
+                    </tr>
+                    <tr>
+                        <td>5回</td>
+                        <td>1500元</td>
+                    </tr>
+                    <tr>
+                        <td>10回</td>
+                        <td>2500元</td>
+                    </tr>
+                    <tr>
+                        <td>20回</td>
+                        <td>4500元</td>
+                    </tr>
+                    <tr>
+                        <td>40回</td>
+                        <td>8000元</td>
                     </tr>
                 </table>
-            </div>
+                <p>・入会金200元</p>
+                <p>・兄弟でのチケット共同利用は可能です</p>
+                <p>・クラスによっては教室費用が別途発生する場合があります</p>
+            </section>
 
-            <div class="course-schedule">
-                <h3>ロボットコース</h3>
-                <p>現在準備中</p>
-            </div>
-        </section>
-
-        <section class="courses">
-            <h2>コースの説明</h2>
-            <div class="course">
-                <h3>基本コース</h3>
-                <div class="course-images">
-                    <img src="img/scratch-sample.jpg" alt="Scratchサンプル1">
-                    <img src="img/scratch-sample2.jfif" alt="Scratchサンプル2">
-                    <img src="img/junior.png" alt="基本コースのサムネイル">
+            <section class="faq">
+                <h2><i class="fas fa-question-circle"></i> よくある質問</h2>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="q">Q. 授業を休んだ場合の振替はありますか？</div>
+                    <div class="a">A.
+                        あります。休まれた場合チケット消費はしません。以下の２つのタイミングで振替をしてください。１：他の時間帯のクラスに参加する（空きがある場合）２：夏休みなどの長期休みに行われる短期講習に参加する
+                    </div>
                 </div>
-                <p>Scratchを使ってゲームを作りながら楽しくプログラミングの基本を学びます。「<a
-                        href="https://www.sikaku.gr.jp/js/ks/">ジュニアプログラミング検定</a>１級への合格を目指します。</p>
-                <p>平仮名の文章が読める<strong>小学２年生以上</strong>にオススメです</p>
-            </div>
-            <div class="course">
-                <h3>応用コース</h3>
-                <div class="course-images">
-                    <img src="img/python-sample.jfif" alt="Pythonサンプル1">
-                    <img src="img/python-sample2.jfif" alt="Pythonサンプル2">
-                    <img src="img/pgskill.jpg" alt="応用コースのサムネイル">
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="q">Q. 全くの初心者ですが授業についていけますか？</div>
+                    <div class="a">A. 年齢も進捗もバラバラです。各生徒にあわせて個別にレッスンを進めていきますので、他の生徒と比較する必要はありません。</div>
                 </div>
-                <p>Pythonを使ってゲームを作りながら楽しく本格的なプログラミングを学びます。<a
-                        href="https://programming-sc.com/">プログラミング能力検定試験</a>６級（大学入学共通テストの「情報」の難易度程度）および<a
-                        href="https://www.pythonic-exam.com/exam/basic">エンジニア認定基礎試験</a>への合格を目指します。</p>
-                <p><strong>ジュニアプログラミング検定１級</strong>程度のプログラミング能力と、<strong>英検５級</strong>程度の英語力が必要になります。</p>
-            </div>
-        </section>
-
-        <section class="fees">
-            <h2>料金</h2>
-            <table>
-                <tr>
-                    <td>5回</td>
-                    <td>1500元</td>
-                </tr>
-                <tr>
-                    <td>10回</td>
-                    <td>2500元</td>
-                </tr>
-                <tr>
-                    <td>20回</td>
-                    <td>4500元</td>
-                </tr>
-                <tr>
-                    <td>40回</td>
-                    <td>8000元</td>
-                </tr>
-            </table>
-            <p>・兄弟でのチケット共同利用は可能です</p>
-        </section>
-
-        <section class="faq">
-            <h2>よくある質問</h2>
-            <div class="question" onclick="toggleAnswer(this)">
-                <div class="q">Q. 授業を休んだ場合の振替はありますか？</div>
-                <div class="a">A.
-                    あります。休まれた場合チケット消費はしません。以下の２つのタイミングで振替をしてください。１：他の時間帯のクラスに参加する（空きがある場合）２：夏休みなどの長期休みに行われる短期講習に参加する
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="q">Q. 途中で退会となった場合、レッスン料は返金されますか？</div>
+                    <div class="a">A. 返金はいたしません。余っているチケットがある場合は、ご友人などに譲ることが可能です。</div>
                 </div>
-            </div>
-            <div class="question" onclick="toggleAnswer(this)">
-                <div class="q">Q. 全くの初心者ですが授業についていけますか？</div>
-                <div class="a">A. クラスには4-5名の生徒がいますが、年齢も進捗もバラバラです。各生徒にあわせて個別にレッスンを進めていきますので、他の生徒と比較する必要はありません。</div>
-            </div>
-            <div class="question" onclick="toggleAnswer(this)">
-                <div class="q">Q. 途中で退会となった場合、レッスン料は返金されますか？</div>
-                <div class="a">A. 返金はいたしません。余っているチケットがある場合は、ご友人などに譲ることが可能です。</div>
-            </div>
-            <div class="question" onclick="toggleAnswer(this)">
-                <div class="q">Q. レッスン内容を簡単に教えてください</div>
-                <div class="a">
-                    A.
-                    <ol>
-                        <li>基本コース<br>Scratchを利用してアクション、RPG、シミュレーション、シューティングといった様々なゲーム作りを行います。進捗状況に応じて「ジュニアプログラミング検定」に挑戦します。
-                        </li>
-                        <li>応用コース<br>Pygameを利用してゲームを作りながら本格的なプログラミングの基本を学びます。Pythonだけでなくサーバ、DBといったオンラインサービスに必要な知識も学びます。「プログラミング能力検定試験」や「Python3
-                            エンジニア検定試験」といった高難易度な試験への合格を目指します。
-                        </li>
-                    </ol>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="q">Q. レッスン内容を簡単に教えてください</div>
+                    <div class="a">
+                        A.
+                        <ol>
+                            <li>基本コース<br>Scratchを利用してアクション、RPG、シミュレーション、シューティングといった様々なゲーム作りを行います。進捗状況に応じて「ジュニアプログラミング検定」に挑戦します。
+                            </li>
+                            <li>応用コース<br>Pythonを利用してゲームを作りながら本格的なプログラミングの基本を学びます。大学入学共通テストの「情報」におけるプログラミング部分の範囲をカバーします。「Python能力認定試験１級」への合格を目指します。
+                            </li>
+                        </ol>
+                    </div>
                 </div>
+                <div class="question" onclick="toggleAnswer(this)">
+                    <div class="q">Q. 1年間でどの程度プログラミングができるようになりますか？</div>
+                    <div class="a">A. 各生徒の年齢、理解度、レッスン外での取り組みなどにより大きく左右されますので、具体は各講師にご確認ください。</div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p><i class="fas fa-envelope"></i> お問い合わせは<a href="mailto:ueno@shgamepp.com">こちら</a></p>
+            <div class="company-info">
+                <p>運営: 上海游加信息有限公司</p>
+                <p>© 2025 上海游加信息有限公司. All Rights Reserved.</p>
             </div>
-            <div class="question" onclick="toggleAnswer(this)">
-                <div class="q">Q. 1年間でどの程度プログラミングができるようになりますか？</div>
-                <div class="a">A. 各生徒の年齢、理解度、レッスン外での取り組みなどにより大きく左右されますので、具体は各講師にご確認ください。</div>
-        </section>
-
-    </main>
-    <footer>
-        <p>お問い合わせは<a href="mailto:info@mandarinschool.com">こちら</a></p>
-    </footer>
+        </footer>
+    </div>
     <script src="js/main.js"></script>
 </body>
 
